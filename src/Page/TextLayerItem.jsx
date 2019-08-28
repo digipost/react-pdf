@@ -87,7 +87,7 @@ export class TextLayerItemInternal extends PureComponent {
 
     const fontData = await this.getFontData(fontName);
     
-    element.style.fontFamily = fontData ? fontData.fallbackName : 'sans-serif';
+    element.style.fontFamily = fontData && fontData.fallbackName ? fontData.fallbackName : 'sans-serif';
 
     const targetWidth = width * scale;
     const actualWidth = this.getElementWidth(element);

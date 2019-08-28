@@ -141,8 +141,7 @@ function (_PureComponent) {
 
               case 8:
                 fontData = _context2.sent;
-                console.log("Vi kjører ", fontData.fallbackName);
-                element.style.fontFamily = fontData ? fontData.fallbackName : 'sans-serif';
+                element.style.fontFamily = fontData && fontData.fallbackName ? fontData.fallbackName : 'sans-serif';
                 targetWidth = width * scale;
                 actualWidth = this.getElementWidth(element);
                 transform = "scaleX(".concat(targetWidth / actualWidth, ")");
@@ -154,7 +153,7 @@ function (_PureComponent) {
 
                 element.style.transform = transform;
 
-              case 17:
+              case 16:
               case "end":
                 return _context2.stop();
             }
