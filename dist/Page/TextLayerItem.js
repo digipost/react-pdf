@@ -117,7 +117,7 @@ function (_PureComponent) {
       var _alignTextItem = (0, _asyncToGenerator2["default"])(
       /*#__PURE__*/
       _regenerator["default"].mark(function _callee2() {
-        var element, _this$props, fontName, scale, width, fontData, fallbackFontName, targetWidth, actualWidth, transform, ascent;
+        var element, _this$props, fontName, scale, width, fontData, targetWidth, actualWidth, transform, ascent;
 
         return _regenerator["default"].wrap(function _callee2$(_context2) {
           while (1) {
@@ -141,8 +141,8 @@ function (_PureComponent) {
 
               case 8:
                 fontData = _context2.sent;
-                fallbackFontName = fontData ? fontData.fallbackName : 'sans-serif';
-                element.style.fontFamily = "".concat(fontName, ", ").concat(fallbackFontName);
+                console.log("Vi kjører ", fontData.fallbackName);
+                element.style.fontFamily = fontData ? fontData.fallbackName : 'sans-serif';
                 targetWidth = width * scale;
                 actualWidth = this.getElementWidth(element);
                 transform = "scaleX(".concat(targetWidth / actualWidth, ")");

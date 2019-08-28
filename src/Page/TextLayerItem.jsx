@@ -1,9 +1,9 @@
-import React, { PureComponent } from 'react';
+import React, {PureComponent} from 'react';
 import PropTypes from 'prop-types';
 
 import PageContext from '../PageContext';
 
-import { isPage, isRotate } from '../shared/propTypes';
+import {isPage, isRotate} from '../shared/propTypes';
 
 export class TextLayerItemInternal extends PureComponent {
   componentDidMount() {
@@ -86,9 +86,8 @@ export class TextLayerItemInternal extends PureComponent {
     element.style.fontFamily = `${fontName}, sans-serif`;
 
     const fontData = await this.getFontData(fontName);
-
-    const fallbackFontName = fontData ? fontData.fallbackName : 'sans-serif';
-    element.style.fontFamily = `${fontName}, ${fallbackFontName}`;
+    
+    element.style.fontFamily = fontData ? fontData.fallbackName : 'sans-serif';
 
     const targetWidth = width * scale;
     const actualWidth = this.getElementWidth(element);
