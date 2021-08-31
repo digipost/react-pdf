@@ -19,11 +19,7 @@ var _utils = require("../../__tests__/utils");
 /* eslint-disable comma-dangle */
 describe('PageSVG', function () {
   describe('loading', function () {
-    it('calls onRenderError when failed to render canvas',
-    /*#__PURE__*/
-    (0, _asyncToGenerator2["default"])(
-    /*#__PURE__*/
-    _regenerator["default"].mark(function _callee() {
+    it('calls onRenderError when failed to render canvas', /*#__PURE__*/(0, _asyncToGenerator2["default"])( /*#__PURE__*/_regenerator["default"].mark(function _callee() {
       var _makeAsyncCallback, onRenderError, onRenderErrorPromise;
 
       return _regenerator["default"].wrap(function _callee$(_context) {
@@ -32,7 +28,7 @@ describe('PageSVG', function () {
             case 0:
               _makeAsyncCallback = (0, _utils.makeAsyncCallback)(), onRenderError = _makeAsyncCallback.func, onRenderErrorPromise = _makeAsyncCallback.promise;
               (0, _utils.muteConsole)();
-              (0, _enzyme.mount)(_react["default"].createElement(_PageSVG.PageSVGInternal, {
+              (0, _enzyme.mount)( /*#__PURE__*/_react["default"].createElement(_PageSVG.PageSVGInternal, {
                 onRenderError: onRenderError,
                 page: _failing_page["default"]
               }));

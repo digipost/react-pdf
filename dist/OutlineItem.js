@@ -1,8 +1,8 @@
 "use strict";
 
-var _interopRequireWildcard = require("@babel/runtime/helpers/interopRequireWildcard");
-
 var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
+
+var _typeof = require("@babel/runtime/helpers/typeof");
 
 Object.defineProperty(exports, "__esModule", {
   value: true
@@ -13,9 +13,9 @@ var _extends2 = _interopRequireDefault(require("@babel/runtime/helpers/extends")
 
 var _objectWithoutProperties2 = _interopRequireDefault(require("@babel/runtime/helpers/objectWithoutProperties"));
 
-var _slicedToArray2 = _interopRequireDefault(require("@babel/runtime/helpers/slicedToArray"));
-
 var _regenerator = _interopRequireDefault(require("@babel/runtime/regenerator"));
+
+var _slicedToArray2 = _interopRequireDefault(require("@babel/runtime/helpers/slicedToArray"));
 
 var _asyncToGenerator2 = _interopRequireDefault(require("@babel/runtime/helpers/asyncToGenerator"));
 
@@ -23,13 +23,13 @@ var _classCallCheck2 = _interopRequireDefault(require("@babel/runtime/helpers/cl
 
 var _createClass2 = _interopRequireDefault(require("@babel/runtime/helpers/createClass"));
 
-var _possibleConstructorReturn2 = _interopRequireDefault(require("@babel/runtime/helpers/possibleConstructorReturn"));
-
-var _getPrototypeOf3 = _interopRequireDefault(require("@babel/runtime/helpers/getPrototypeOf"));
-
 var _assertThisInitialized2 = _interopRequireDefault(require("@babel/runtime/helpers/assertThisInitialized"));
 
 var _inherits2 = _interopRequireDefault(require("@babel/runtime/helpers/inherits"));
+
+var _possibleConstructorReturn2 = _interopRequireDefault(require("@babel/runtime/helpers/possibleConstructorReturn"));
+
+var _getPrototypeOf2 = _interopRequireDefault(require("@babel/runtime/helpers/getPrototypeOf"));
 
 var _defineProperty2 = _interopRequireDefault(require("@babel/runtime/helpers/defineProperty"));
 
@@ -47,14 +47,22 @@ var _utils = require("./shared/utils");
 
 var _propTypes2 = require("./shared/propTypes");
 
-var OutlineItemInternal =
-/*#__PURE__*/
-function (_PureComponent) {
+var _excluded = ["item"];
+
+function _getRequireWildcardCache(nodeInterop) { if (typeof WeakMap !== "function") return null; var cacheBabelInterop = new WeakMap(); var cacheNodeInterop = new WeakMap(); return (_getRequireWildcardCache = function _getRequireWildcardCache(nodeInterop) { return nodeInterop ? cacheNodeInterop : cacheBabelInterop; })(nodeInterop); }
+
+function _interopRequireWildcard(obj, nodeInterop) { if (!nodeInterop && obj && obj.__esModule) { return obj; } if (obj === null || _typeof(obj) !== "object" && typeof obj !== "function") { return { "default": obj }; } var cache = _getRequireWildcardCache(nodeInterop); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (key !== "default" && Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj["default"] = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
+
+function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = (0, _getPrototypeOf2["default"])(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = (0, _getPrototypeOf2["default"])(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return (0, _possibleConstructorReturn2["default"])(this, result); }; }
+
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})); return true; } catch (e) { return false; } }
+
+var OutlineItemInternal = /*#__PURE__*/function (_PureComponent) {
   (0, _inherits2["default"])(OutlineItemInternal, _PureComponent);
 
-  function OutlineItemInternal() {
-    var _getPrototypeOf2;
+  var _super = _createSuper(OutlineItemInternal);
 
+  function OutlineItemInternal() {
     var _this;
 
     (0, _classCallCheck2["default"])(this, OutlineItemInternal);
@@ -63,12 +71,8 @@ function (_PureComponent) {
       args[_key] = arguments[_key];
     }
 
-    _this = (0, _possibleConstructorReturn2["default"])(this, (_getPrototypeOf2 = (0, _getPrototypeOf3["default"])(OutlineItemInternal)).call.apply(_getPrototypeOf2, [this].concat(args)));
-    (0, _defineProperty2["default"])((0, _assertThisInitialized2["default"])(_this), "getDestination",
-    /*#__PURE__*/
-    (0, _asyncToGenerator2["default"])(
-    /*#__PURE__*/
-    _regenerator["default"].mark(function _callee() {
+    _this = _super.call.apply(_super, [this].concat(args));
+    (0, _defineProperty2["default"])((0, _assertThisInitialized2["default"])(_this), "getDestination", /*#__PURE__*/(0, _asyncToGenerator2["default"])( /*#__PURE__*/_regenerator["default"].mark(function _callee() {
       var _this$props, item, pdf;
 
       return _regenerator["default"].wrap(function _callee$(_context) {
@@ -108,11 +112,7 @@ function (_PureComponent) {
         }
       }, _callee);
     })));
-    (0, _defineProperty2["default"])((0, _assertThisInitialized2["default"])(_this), "getPageIndex",
-    /*#__PURE__*/
-    (0, _asyncToGenerator2["default"])(
-    /*#__PURE__*/
-    _regenerator["default"].mark(function _callee2() {
+    (0, _defineProperty2["default"])((0, _assertThisInitialized2["default"])(_this), "getPageIndex", /*#__PURE__*/(0, _asyncToGenerator2["default"])( /*#__PURE__*/_regenerator["default"].mark(function _callee2() {
       var pdf, destination, _destination, ref;
 
       return _regenerator["default"].wrap(function _callee2$(_context2) {
@@ -154,11 +154,7 @@ function (_PureComponent) {
         }
       }, _callee2);
     })));
-    (0, _defineProperty2["default"])((0, _assertThisInitialized2["default"])(_this), "getPageNumber",
-    /*#__PURE__*/
-    (0, _asyncToGenerator2["default"])(
-    /*#__PURE__*/
-    _regenerator["default"].mark(function _callee3() {
+    (0, _defineProperty2["default"])((0, _assertThisInitialized2["default"])(_this), "getPageNumber", /*#__PURE__*/(0, _asyncToGenerator2["default"])( /*#__PURE__*/_regenerator["default"].mark(function _callee3() {
       return _regenerator["default"].wrap(function _callee3$(_context3) {
         while (1) {
           switch (_context3.prev = _context3.next) {
@@ -185,12 +181,8 @@ function (_PureComponent) {
         }
       }, _callee3);
     })));
-    (0, _defineProperty2["default"])((0, _assertThisInitialized2["default"])(_this), "onClick",
-    /*#__PURE__*/
-    function () {
-      var _ref4 = (0, _asyncToGenerator2["default"])(
-      /*#__PURE__*/
-      _regenerator["default"].mark(function _callee4(event) {
+    (0, _defineProperty2["default"])((0, _assertThisInitialized2["default"])(_this), "onClick", /*#__PURE__*/function () {
+      var _ref4 = (0, _asyncToGenerator2["default"])( /*#__PURE__*/_regenerator["default"].mark(function _callee4(event) {
         var onClick, pageIndex, pageNumber;
         return _regenerator["default"].wrap(function _callee4$(_context4) {
           while (1) {
@@ -233,15 +225,15 @@ function (_PureComponent) {
     value: function renderSubitems() {
       var _this$props2 = this.props,
           item = _this$props2.item,
-          otherProps = (0, _objectWithoutProperties2["default"])(_this$props2, ["item"]);
+          otherProps = (0, _objectWithoutProperties2["default"])(_this$props2, _excluded);
 
       if (!item.items || !item.items.length) {
         return null;
       }
 
       var subitems = item.items;
-      return _react["default"].createElement("ul", null, subitems.map(function (subitem, subitemIndex) {
-        return _react["default"].createElement(OutlineItemInternal, (0, _extends2["default"])({
+      return /*#__PURE__*/_react["default"].createElement("ul", null, subitems.map(function (subitem, subitemIndex) {
+        return /*#__PURE__*/_react["default"].createElement(OutlineItemInternal, (0, _extends2["default"])({
           key: typeof subitem.destination === 'string' ? subitem.destination : subitemIndex,
           item: subitem
         }, otherProps));
@@ -253,7 +245,7 @@ function (_PureComponent) {
       var item = this.props.item;
       /* eslint-disable jsx-a11y/anchor-is-valid */
 
-      return _react["default"].createElement("li", null, _react["default"].createElement("a", {
+      return /*#__PURE__*/_react["default"].createElement("li", null, /*#__PURE__*/_react["default"].createElement("a", {
         href: "#",
         onClick: this.onClick
       }, item.title), this.renderSubitems());
@@ -280,9 +272,9 @@ OutlineItemInternal.propTypes = {
 };
 
 var OutlineItem = function OutlineItem(props) {
-  return _react["default"].createElement(_DocumentContext["default"].Consumer, null, function (documentContext) {
-    return _react["default"].createElement(_OutlineContext["default"].Consumer, null, function (outlineContext) {
-      return _react["default"].createElement(OutlineItemInternal, (0, _extends2["default"])({}, documentContext, outlineContext, props));
+  return /*#__PURE__*/_react["default"].createElement(_DocumentContext["default"].Consumer, null, function (documentContext) {
+    return /*#__PURE__*/_react["default"].createElement(_OutlineContext["default"].Consumer, null, function (outlineContext) {
+      return /*#__PURE__*/_react["default"].createElement(OutlineItemInternal, (0, _extends2["default"])({}, documentContext, outlineContext, props));
     });
   });
 };

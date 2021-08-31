@@ -28,11 +28,7 @@ describe('TextLayer', function () {
 
   var desiredTextItems;
   var desiredTextItems2;
-  beforeAll(
-  /*#__PURE__*/
-  (0, _asyncToGenerator2["default"])(
-  /*#__PURE__*/
-  _regenerator["default"].mark(function _callee() {
+  beforeAll( /*#__PURE__*/(0, _asyncToGenerator2["default"])( /*#__PURE__*/_regenerator["default"].mark(function _callee() {
     var pdf, textContent, textContent2;
     return _regenerator["default"].wrap(function _callee$(_context) {
       while (1) {
@@ -76,11 +72,7 @@ describe('TextLayer', function () {
     }, _callee);
   })));
   describe('loading', function () {
-    it('loads text content and calls onGetTextSuccess callback properly',
-    /*#__PURE__*/
-    (0, _asyncToGenerator2["default"])(
-    /*#__PURE__*/
-    _regenerator["default"].mark(function _callee2() {
+    it('loads text content and calls onGetTextSuccess callback properly', /*#__PURE__*/(0, _asyncToGenerator2["default"])( /*#__PURE__*/_regenerator["default"].mark(function _callee2() {
       var _makeAsyncCallback, onGetTextSuccess, onGetTextSuccessPromise;
 
       return _regenerator["default"].wrap(function _callee2$(_context2) {
@@ -88,7 +80,7 @@ describe('TextLayer', function () {
           switch (_context2.prev = _context2.next) {
             case 0:
               _makeAsyncCallback = (0, _utils.makeAsyncCallback)(), onGetTextSuccess = _makeAsyncCallback.func, onGetTextSuccessPromise = _makeAsyncCallback.promise;
-              (0, _enzyme.shallow)(_react["default"].createElement(_TextLayer.TextLayerInternal, {
+              (0, _enzyme.shallow)( /*#__PURE__*/_react["default"].createElement(_TextLayer.TextLayerInternal, {
                 onGetTextSuccess: onGetTextSuccess,
                 page: page
               }));
@@ -103,11 +95,7 @@ describe('TextLayer', function () {
         }
       }, _callee2);
     })));
-    it('calls onGetTextError when failed to load text content',
-    /*#__PURE__*/
-    (0, _asyncToGenerator2["default"])(
-    /*#__PURE__*/
-    _regenerator["default"].mark(function _callee3() {
+    it('calls onGetTextError when failed to load text content', /*#__PURE__*/(0, _asyncToGenerator2["default"])( /*#__PURE__*/_regenerator["default"].mark(function _callee3() {
       var _makeAsyncCallback2, onGetTextError, onGetTextErrorPromise;
 
       return _regenerator["default"].wrap(function _callee3$(_context3) {
@@ -116,7 +104,7 @@ describe('TextLayer', function () {
             case 0:
               _makeAsyncCallback2 = (0, _utils.makeAsyncCallback)(), onGetTextError = _makeAsyncCallback2.func, onGetTextErrorPromise = _makeAsyncCallback2.promise;
               (0, _utils.muteConsole)();
-              (0, _enzyme.shallow)(_react["default"].createElement(_TextLayer.TextLayerInternal, {
+              (0, _enzyme.shallow)( /*#__PURE__*/_react["default"].createElement(_TextLayer.TextLayerInternal, {
                 onGetTextError: onGetTextError,
                 page: _failing_page["default"]
               }));
@@ -134,11 +122,7 @@ describe('TextLayer', function () {
         }
       }, _callee3);
     })));
-    it('replaces text content properly',
-    /*#__PURE__*/
-    (0, _asyncToGenerator2["default"])(
-    /*#__PURE__*/
-    _regenerator["default"].mark(function _callee4() {
+    it('replaces text content properly', /*#__PURE__*/(0, _asyncToGenerator2["default"])( /*#__PURE__*/_regenerator["default"].mark(function _callee4() {
       var _makeAsyncCallback3, onGetTextSuccess, onGetTextSuccessPromise, mountedComponent, _makeAsyncCallback4, onGetTextSuccess2, onGetTextSuccessPromise2;
 
       return _regenerator["default"].wrap(function _callee4$(_context4) {
@@ -146,7 +130,7 @@ describe('TextLayer', function () {
           switch (_context4.prev = _context4.next) {
             case 0:
               _makeAsyncCallback3 = (0, _utils.makeAsyncCallback)(), onGetTextSuccess = _makeAsyncCallback3.func, onGetTextSuccessPromise = _makeAsyncCallback3.promise;
-              mountedComponent = (0, _enzyme.shallow)(_react["default"].createElement(_TextLayer.TextLayerInternal, {
+              mountedComponent = (0, _enzyme.shallow)( /*#__PURE__*/_react["default"].createElement(_TextLayer.TextLayerInternal, {
                 onGetTextSuccess: onGetTextSuccess,
                 page: page
               }));
@@ -173,17 +157,13 @@ describe('TextLayer', function () {
     it('throws an error when placed outside Page', function () {
       (0, _utils.muteConsole)();
       expect(function () {
-        return (0, _enzyme.shallow)(_react["default"].createElement(_TextLayer.TextLayerInternal, null));
+        return (0, _enzyme.shallow)( /*#__PURE__*/_react["default"].createElement(_TextLayer.TextLayerInternal, null));
       }).toThrow();
       (0, _utils.restoreConsole)();
     });
   });
   describe('rendering', function () {
-    it('renders text content properly',
-    /*#__PURE__*/
-    (0, _asyncToGenerator2["default"])(
-    /*#__PURE__*/
-    _regenerator["default"].mark(function _callee5() {
+    it('renders text content properly', /*#__PURE__*/(0, _asyncToGenerator2["default"])( /*#__PURE__*/_regenerator["default"].mark(function _callee5() {
       var _makeAsyncCallback5, onGetTextSuccess, onGetTextSuccessPromise, component;
 
       return _regenerator["default"].wrap(function _callee5$(_context5) {
@@ -191,7 +171,7 @@ describe('TextLayer', function () {
           switch (_context5.prev = _context5.next) {
             case 0:
               _makeAsyncCallback5 = (0, _utils.makeAsyncCallback)(), onGetTextSuccess = _makeAsyncCallback5.func, onGetTextSuccessPromise = _makeAsyncCallback5.promise;
-              component = (0, _enzyme.shallow)(_react["default"].createElement(_TextLayer.TextLayerInternal, {
+              component = (0, _enzyme.shallow)( /*#__PURE__*/_react["default"].createElement(_TextLayer.TextLayerInternal, {
                 onGetTextSuccess: onGetTextSuccess,
                 page: page
               }));
@@ -209,11 +189,7 @@ describe('TextLayer', function () {
         }
       }, _callee5);
     })));
-    it('renders text content at a given rotation',
-    /*#__PURE__*/
-    (0, _asyncToGenerator2["default"])(
-    /*#__PURE__*/
-    _regenerator["default"].mark(function _callee6() {
+    it('renders text content at a given rotation', /*#__PURE__*/(0, _asyncToGenerator2["default"])( /*#__PURE__*/_regenerator["default"].mark(function _callee6() {
       var _makeAsyncCallback6, onGetTextSuccess, onGetTextSuccessPromise, rotate, component;
 
       return _regenerator["default"].wrap(function _callee6$(_context6) {
@@ -222,7 +198,7 @@ describe('TextLayer', function () {
             case 0:
               _makeAsyncCallback6 = (0, _utils.makeAsyncCallback)(), onGetTextSuccess = _makeAsyncCallback6.func, onGetTextSuccessPromise = _makeAsyncCallback6.promise;
               rotate = 90;
-              component = (0, _enzyme.shallow)(_react["default"].createElement(_TextLayer.TextLayerInternal, {
+              component = (0, _enzyme.shallow)( /*#__PURE__*/_react["default"].createElement(_TextLayer.TextLayerInternal, {
                 onGetTextSuccess: onGetTextSuccess,
                 page: page,
                 rotate: rotate
@@ -244,11 +220,7 @@ describe('TextLayer', function () {
         }
       }, _callee6);
     })));
-    it('renders text content at a given scale',
-    /*#__PURE__*/
-    (0, _asyncToGenerator2["default"])(
-    /*#__PURE__*/
-    _regenerator["default"].mark(function _callee7() {
+    it('renders text content at a given scale', /*#__PURE__*/(0, _asyncToGenerator2["default"])( /*#__PURE__*/_regenerator["default"].mark(function _callee7() {
       var _makeAsyncCallback7, onGetTextSuccess, onGetTextSuccessPromise, scale, component;
 
       return _regenerator["default"].wrap(function _callee7$(_context7) {
@@ -257,7 +229,7 @@ describe('TextLayer', function () {
             case 0:
               _makeAsyncCallback7 = (0, _utils.makeAsyncCallback)(), onGetTextSuccess = _makeAsyncCallback7.func, onGetTextSuccessPromise = _makeAsyncCallback7.promise;
               scale = 2;
-              component = (0, _enzyme.shallow)(_react["default"].createElement(_TextLayer.TextLayerInternal, {
+              component = (0, _enzyme.shallow)( /*#__PURE__*/_react["default"].createElement(_TextLayer.TextLayerInternal, {
                 onGetTextSuccess: onGetTextSuccess,
                 page: page,
                 scale: scale

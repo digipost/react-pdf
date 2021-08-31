@@ -1,17 +1,17 @@
 "use strict";
 
-var _interopRequireWildcard = require("@babel/runtime/helpers/interopRequireWildcard");
-
 var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
+
+var _typeof = require("@babel/runtime/helpers/typeof");
 
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports["default"] = exports.OutlineInternal = void 0;
 
-var _extends2 = _interopRequireDefault(require("@babel/runtime/helpers/extends"));
-
 var _regenerator = _interopRequireDefault(require("@babel/runtime/regenerator"));
+
+var _extends2 = _interopRequireDefault(require("@babel/runtime/helpers/extends"));
 
 var _asyncToGenerator2 = _interopRequireDefault(require("@babel/runtime/helpers/asyncToGenerator"));
 
@@ -19,13 +19,13 @@ var _classCallCheck2 = _interopRequireDefault(require("@babel/runtime/helpers/cl
 
 var _createClass2 = _interopRequireDefault(require("@babel/runtime/helpers/createClass"));
 
-var _possibleConstructorReturn2 = _interopRequireDefault(require("@babel/runtime/helpers/possibleConstructorReturn"));
-
-var _getPrototypeOf3 = _interopRequireDefault(require("@babel/runtime/helpers/getPrototypeOf"));
-
 var _assertThisInitialized2 = _interopRequireDefault(require("@babel/runtime/helpers/assertThisInitialized"));
 
 var _inherits2 = _interopRequireDefault(require("@babel/runtime/helpers/inherits"));
+
+var _possibleConstructorReturn2 = _interopRequireDefault(require("@babel/runtime/helpers/possibleConstructorReturn"));
+
+var _getPrototypeOf2 = _interopRequireDefault(require("@babel/runtime/helpers/getPrototypeOf"));
 
 var _defineProperty2 = _interopRequireDefault(require("@babel/runtime/helpers/defineProperty"));
 
@@ -47,18 +47,24 @@ var _utils = require("./shared/utils");
 
 var _propTypes2 = require("./shared/propTypes");
 
-function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
+function _getRequireWildcardCache(nodeInterop) { if (typeof WeakMap !== "function") return null; var cacheBabelInterop = new WeakMap(); var cacheNodeInterop = new WeakMap(); return (_getRequireWildcardCache = function _getRequireWildcardCache(nodeInterop) { return nodeInterop ? cacheNodeInterop : cacheBabelInterop; })(nodeInterop); }
 
-function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(source, true).forEach(function (key) { (0, _defineProperty2["default"])(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(source).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
+function _interopRequireWildcard(obj, nodeInterop) { if (!nodeInterop && obj && obj.__esModule) { return obj; } if (obj === null || _typeof(obj) !== "object" && typeof obj !== "function") { return { "default": obj }; } var cache = _getRequireWildcardCache(nodeInterop); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (key !== "default" && Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj["default"] = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
 
-var OutlineInternal =
-/*#__PURE__*/
-function (_PureComponent) {
+function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) { symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); } keys.push.apply(keys, symbols); } return keys; }
+
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { (0, _defineProperty2["default"])(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
+
+function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = (0, _getPrototypeOf2["default"])(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = (0, _getPrototypeOf2["default"])(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return (0, _possibleConstructorReturn2["default"])(this, result); }; }
+
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})); return true; } catch (e) { return false; } }
+
+var OutlineInternal = /*#__PURE__*/function (_PureComponent) {
   (0, _inherits2["default"])(OutlineInternal, _PureComponent);
 
-  function OutlineInternal() {
-    var _getPrototypeOf2;
+  var _super = _createSuper(OutlineInternal);
 
+  function OutlineInternal() {
     var _this;
 
     (0, _classCallCheck2["default"])(this, OutlineInternal);
@@ -67,15 +73,11 @@ function (_PureComponent) {
       args[_key] = arguments[_key];
     }
 
-    _this = (0, _possibleConstructorReturn2["default"])(this, (_getPrototypeOf2 = (0, _getPrototypeOf3["default"])(OutlineInternal)).call.apply(_getPrototypeOf2, [this].concat(args)));
+    _this = _super.call.apply(_super, [this].concat(args));
     (0, _defineProperty2["default"])((0, _assertThisInitialized2["default"])(_this), "state", {
       outline: null
     });
-    (0, _defineProperty2["default"])((0, _assertThisInitialized2["default"])(_this), "loadOutline",
-    /*#__PURE__*/
-    (0, _asyncToGenerator2["default"])(
-    /*#__PURE__*/
-    _regenerator["default"].mark(function _callee() {
+    (0, _defineProperty2["default"])((0, _assertThisInitialized2["default"])(_this), "loadOutline", /*#__PURE__*/(0, _asyncToGenerator2["default"])( /*#__PURE__*/_regenerator["default"].mark(function _callee() {
       var pdf, cancellable, outline;
       return _regenerator["default"].wrap(function _callee$(_context) {
         while (1) {
@@ -178,37 +180,6 @@ function (_PureComponent) {
       (0, _utils.cancelRunningTask)(this.runningTask);
     }
   }, {
-    key: "renderOutline",
-    value: function renderOutline() {
-      var outline = this.state.outline;
-      return _react["default"].createElement("ul", null, outline.map(function (item, itemIndex) {
-        return _react["default"].createElement(_OutlineItem["default"], {
-          key: typeof item.destination === 'string' ? item.destination : itemIndex,
-          item: item
-        });
-      }));
-    }
-  }, {
-    key: "render",
-    value: function render() {
-      var pdf = this.props.pdf;
-      var outline = this.state.outline;
-
-      if (!pdf || !outline) {
-        return null;
-      }
-
-      var _this$props = this.props,
-          className = _this$props.className,
-          inputRef = _this$props.inputRef;
-      return _react["default"].createElement("div", (0, _extends2["default"])({
-        className: (0, _mergeClassNames["default"])('react-pdf__Outline', className),
-        ref: inputRef
-      }, this.eventProps), _react["default"].createElement(_OutlineContext["default"].Provider, {
-        value: this.childContext
-      }, this.renderOutline()));
-    }
-  }, {
     key: "childContext",
     get: function get() {
       return {
@@ -229,6 +200,37 @@ function (_PureComponent) {
      * Called when an outline is read successfully
      */
 
+  }, {
+    key: "renderOutline",
+    value: function renderOutline() {
+      var outline = this.state.outline;
+      return /*#__PURE__*/_react["default"].createElement("ul", null, outline.map(function (item, itemIndex) {
+        return /*#__PURE__*/_react["default"].createElement(_OutlineItem["default"], {
+          key: typeof item.destination === 'string' ? item.destination : itemIndex,
+          item: item
+        });
+      }));
+    }
+  }, {
+    key: "render",
+    value: function render() {
+      var pdf = this.props.pdf;
+      var outline = this.state.outline;
+
+      if (!pdf || !outline) {
+        return null;
+      }
+
+      var _this$props = this.props,
+          className = _this$props.className,
+          inputRef = _this$props.inputRef;
+      return /*#__PURE__*/_react["default"].createElement("div", (0, _extends2["default"])({
+        className: (0, _mergeClassNames["default"])('react-pdf__Outline', className),
+        ref: inputRef
+      }, this.eventProps), /*#__PURE__*/_react["default"].createElement(_OutlineContext["default"].Provider, {
+        value: this.childContext
+      }, this.renderOutline()));
+    }
   }]);
   return OutlineInternal;
 }(_react.PureComponent);
@@ -244,13 +246,13 @@ OutlineInternal.propTypes = _objectSpread({
 }, (0, _propTypes2.eventsProps)());
 
 function Outline(props, ref) {
-  return _react["default"].createElement(_DocumentContext["default"].Consumer, null, function (context) {
-    return _react["default"].createElement(OutlineInternal, (0, _extends2["default"])({
+  return /*#__PURE__*/_react["default"].createElement(_DocumentContext["default"].Consumer, null, function (context) {
+    return /*#__PURE__*/_react["default"].createElement(OutlineInternal, (0, _extends2["default"])({
       ref: ref
     }, context, props));
   });
 }
 
-var _default = _react["default"].forwardRef(Outline);
+var _default = /*#__PURE__*/_react["default"].forwardRef(Outline);
 
 exports["default"] = _default;

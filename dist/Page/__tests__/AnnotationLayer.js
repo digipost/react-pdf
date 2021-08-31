@@ -4,9 +4,9 @@ var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefau
 
 var _taggedTemplateLiteral2 = _interopRequireDefault(require("@babel/runtime/helpers/taggedTemplateLiteral"));
 
-var _toConsumableArray2 = _interopRequireDefault(require("@babel/runtime/helpers/toConsumableArray"));
-
 var _regenerator = _interopRequireDefault(require("@babel/runtime/regenerator"));
+
+var _toConsumableArray2 = _interopRequireDefault(require("@babel/runtime/helpers/toConsumableArray"));
 
 var _asyncToGenerator2 = _interopRequireDefault(require("@babel/runtime/helpers/asyncToGenerator"));
 
@@ -24,15 +24,7 @@ var _failing_page = _interopRequireDefault(require("../../../__mocks__/_failing_
 
 var _utils = require("../../__tests__/utils");
 
-function _templateObject() {
-  var data = (0, _taggedTemplateLiteral2["default"])(["\n      linkServiceTarget | target\n      ", "              | ", "\n      ", "              | ", "\n      ", "              | ", "\n      ", "              | ", "\n    "]);
-
-  _templateObject = function _templateObject() {
-    return data;
-  };
-
-  return data;
-}
+var _templateObject;
 
 var pdfFile = (0, _utils.loadPDF)('./__mocks__/_pdf.pdf');
 /* eslint-disable comma-dangle */
@@ -45,11 +37,7 @@ describe('AnnotationLayer', function () {
 
   var desiredAnnotations;
   var desiredAnnotations2;
-  beforeAll(
-  /*#__PURE__*/
-  (0, _asyncToGenerator2["default"])(
-  /*#__PURE__*/
-  _regenerator["default"].mark(function _callee() {
+  beforeAll( /*#__PURE__*/(0, _asyncToGenerator2["default"])( /*#__PURE__*/_regenerator["default"].mark(function _callee() {
     var pdf;
     return _regenerator["default"].wrap(function _callee$(_context) {
       while (1) {
@@ -91,11 +79,7 @@ describe('AnnotationLayer', function () {
     }, _callee);
   })));
   describe('loading', function () {
-    it('loads annotations and calls onGetAnnotationsSuccess callback properly',
-    /*#__PURE__*/
-    (0, _asyncToGenerator2["default"])(
-    /*#__PURE__*/
-    _regenerator["default"].mark(function _callee2() {
+    it('loads annotations and calls onGetAnnotationsSuccess callback properly', /*#__PURE__*/(0, _asyncToGenerator2["default"])( /*#__PURE__*/_regenerator["default"].mark(function _callee2() {
       var _makeAsyncCallback, onGetAnnotationsSuccess, onGetAnnotationsSuccessPromise;
 
       return _regenerator["default"].wrap(function _callee2$(_context2) {
@@ -103,7 +87,7 @@ describe('AnnotationLayer', function () {
           switch (_context2.prev = _context2.next) {
             case 0:
               _makeAsyncCallback = (0, _utils.makeAsyncCallback)(), onGetAnnotationsSuccess = _makeAsyncCallback.func, onGetAnnotationsSuccessPromise = _makeAsyncCallback.promise;
-              (0, _enzyme.mount)(_react["default"].createElement(_AnnotationLayer.AnnotationLayerInternal, {
+              (0, _enzyme.mount)( /*#__PURE__*/_react["default"].createElement(_AnnotationLayer.AnnotationLayerInternal, {
                 linkService: linkService,
                 onGetAnnotationsSuccess: onGetAnnotationsSuccess,
                 page: page
@@ -119,11 +103,7 @@ describe('AnnotationLayer', function () {
         }
       }, _callee2);
     })));
-    it('calls onGetAnnotationsError when failed to load annotations',
-    /*#__PURE__*/
-    (0, _asyncToGenerator2["default"])(
-    /*#__PURE__*/
-    _regenerator["default"].mark(function _callee3() {
+    it('calls onGetAnnotationsError when failed to load annotations', /*#__PURE__*/(0, _asyncToGenerator2["default"])( /*#__PURE__*/_regenerator["default"].mark(function _callee3() {
       var _makeAsyncCallback2, onGetAnnotationsError, onGetAnnotationsErrorPromise;
 
       return _regenerator["default"].wrap(function _callee3$(_context3) {
@@ -132,7 +112,7 @@ describe('AnnotationLayer', function () {
             case 0:
               _makeAsyncCallback2 = (0, _utils.makeAsyncCallback)(), onGetAnnotationsError = _makeAsyncCallback2.func, onGetAnnotationsErrorPromise = _makeAsyncCallback2.promise;
               (0, _utils.muteConsole)();
-              (0, _enzyme.mount)(_react["default"].createElement(_AnnotationLayer.AnnotationLayerInternal, {
+              (0, _enzyme.mount)( /*#__PURE__*/_react["default"].createElement(_AnnotationLayer.AnnotationLayerInternal, {
                 linkService: linkService,
                 onGetAnnotationsError: onGetAnnotationsError,
                 page: _failing_page["default"]
@@ -151,11 +131,7 @@ describe('AnnotationLayer', function () {
         }
       }, _callee3);
     })));
-    it('replaces annotations properly when page is changed',
-    /*#__PURE__*/
-    (0, _asyncToGenerator2["default"])(
-    /*#__PURE__*/
-    _regenerator["default"].mark(function _callee4() {
+    it('replaces annotations properly when page is changed', /*#__PURE__*/(0, _asyncToGenerator2["default"])( /*#__PURE__*/_regenerator["default"].mark(function _callee4() {
       var _makeAsyncCallback3, onGetAnnotationsSuccess, onGetAnnotationsSuccessPromise, mountedComponent, _makeAsyncCallback4, onGetAnnotationsSuccess2, onGetAnnotationsSuccessPromise2;
 
       return _regenerator["default"].wrap(function _callee4$(_context4) {
@@ -163,7 +139,7 @@ describe('AnnotationLayer', function () {
           switch (_context4.prev = _context4.next) {
             case 0:
               _makeAsyncCallback3 = (0, _utils.makeAsyncCallback)(), onGetAnnotationsSuccess = _makeAsyncCallback3.func, onGetAnnotationsSuccessPromise = _makeAsyncCallback3.promise;
-              mountedComponent = (0, _enzyme.mount)(_react["default"].createElement(_AnnotationLayer.AnnotationLayerInternal, {
+              mountedComponent = (0, _enzyme.mount)( /*#__PURE__*/_react["default"].createElement(_AnnotationLayer.AnnotationLayerInternal, {
                 linkService: linkService,
                 onGetAnnotationsSuccess: onGetAnnotationsSuccess,
                 page: page
@@ -191,17 +167,13 @@ describe('AnnotationLayer', function () {
     it('throws an error when placed outside Page', function () {
       (0, _utils.muteConsole)();
       expect(function () {
-        return (0, _enzyme.shallow)(_react["default"].createElement(_AnnotationLayer.AnnotationLayerInternal, null));
+        return (0, _enzyme.shallow)( /*#__PURE__*/_react["default"].createElement(_AnnotationLayer.AnnotationLayerInternal, null));
       }).toThrow();
       (0, _utils.restoreConsole)();
     });
   });
   describe('rendering', function () {
-    it('renders annotations properly',
-    /*#__PURE__*/
-    (0, _asyncToGenerator2["default"])(
-    /*#__PURE__*/
-    _regenerator["default"].mark(function _callee5() {
+    it('renders annotations properly', /*#__PURE__*/(0, _asyncToGenerator2["default"])( /*#__PURE__*/_regenerator["default"].mark(function _callee5() {
       var _makeAsyncCallback5, onRenderAnnotationLayerSuccess, onRenderAnnotationLayerSuccessPromise, component;
 
       return _regenerator["default"].wrap(function _callee5$(_context5) {
@@ -209,7 +181,7 @@ describe('AnnotationLayer', function () {
           switch (_context5.prev = _context5.next) {
             case 0:
               _makeAsyncCallback5 = (0, _utils.makeAsyncCallback)(), onRenderAnnotationLayerSuccess = _makeAsyncCallback5.func, onRenderAnnotationLayerSuccessPromise = _makeAsyncCallback5.promise;
-              component = (0, _enzyme.mount)(_react["default"].createElement(_AnnotationLayer.AnnotationLayerInternal, {
+              component = (0, _enzyme.mount)( /*#__PURE__*/_react["default"].createElement(_AnnotationLayer.AnnotationLayerInternal, {
                 linkService: linkService,
                 onRenderAnnotationLayerSuccess: onRenderAnnotationLayerSuccess,
                 page: page
@@ -231,7 +203,7 @@ describe('AnnotationLayer', function () {
     })));
     /* eslint-disable indent */
 
-    it.each(_templateObject(), 1, '_self', 2, '_blank', 3, '_parent', 4, '_top')('renders all links with target $target given externalLinkTarget = $target', function (_ref6) {
+    it.each(_templateObject || (_templateObject = (0, _taggedTemplateLiteral2["default"])(["\n      linkServiceTarget | target\n      ", "              | ", "\n      ", "              | ", "\n      ", "              | ", "\n      ", "              | ", "\n    "])), 1, '_self', 2, '_blank', 3, '_parent', 4, '_top')('renders all links with target $target given externalLinkTarget = $target', function (_ref6) {
       var linkServiceTarget = _ref6.linkServiceTarget,
           target = _ref6.target;
 
@@ -241,7 +213,7 @@ describe('AnnotationLayer', function () {
 
       var customLinkService = new _LinkService["default"]();
       customLinkService.externalLinkTarget = linkServiceTarget;
-      var component = (0, _enzyme.mount)(_react["default"].createElement(_AnnotationLayer.AnnotationLayerInternal, {
+      var component = (0, _enzyme.mount)( /*#__PURE__*/_react["default"].createElement(_AnnotationLayer.AnnotationLayerInternal, {
         linkService: customLinkService,
         onRenderAnnotationLayerSuccess: onRenderAnnotationLayerSuccess,
         page: page
@@ -263,11 +235,7 @@ describe('AnnotationLayer', function () {
     });
     /* eslint-enable indent */
 
-    it('renders annotations at a given rotation',
-    /*#__PURE__*/
-    (0, _asyncToGenerator2["default"])(
-    /*#__PURE__*/
-    _regenerator["default"].mark(function _callee6() {
+    it('renders annotations at a given rotation', /*#__PURE__*/(0, _asyncToGenerator2["default"])( /*#__PURE__*/_regenerator["default"].mark(function _callee6() {
       var _makeAsyncCallback7, onRenderAnnotationLayerSuccess, onRenderAnnotationLayerSuccessPromise, rotate, component;
 
       return _regenerator["default"].wrap(function _callee6$(_context6) {
@@ -276,7 +244,7 @@ describe('AnnotationLayer', function () {
             case 0:
               _makeAsyncCallback7 = (0, _utils.makeAsyncCallback)(), onRenderAnnotationLayerSuccess = _makeAsyncCallback7.func, onRenderAnnotationLayerSuccessPromise = _makeAsyncCallback7.promise;
               rotate = 90;
-              component = (0, _enzyme.mount)(_react["default"].createElement(_AnnotationLayer.AnnotationLayerInternal, {
+              component = (0, _enzyme.mount)( /*#__PURE__*/_react["default"].createElement(_AnnotationLayer.AnnotationLayerInternal, {
                 linkService: linkService,
                 onRenderAnnotationLayerSuccess: onRenderAnnotationLayerSuccess,
                 page: page,
@@ -299,11 +267,7 @@ describe('AnnotationLayer', function () {
         }
       }, _callee6);
     })));
-    it('renders annotations at a given scale',
-    /*#__PURE__*/
-    (0, _asyncToGenerator2["default"])(
-    /*#__PURE__*/
-    _regenerator["default"].mark(function _callee7() {
+    it('renders annotations at a given scale', /*#__PURE__*/(0, _asyncToGenerator2["default"])( /*#__PURE__*/_regenerator["default"].mark(function _callee7() {
       var _makeAsyncCallback8, onRenderAnnotationLayerSuccess, onRenderAnnotationLayerSuccessPromise, scale, component;
 
       return _regenerator["default"].wrap(function _callee7$(_context7) {
@@ -312,7 +276,7 @@ describe('AnnotationLayer', function () {
             case 0:
               _makeAsyncCallback8 = (0, _utils.makeAsyncCallback)(), onRenderAnnotationLayerSuccess = _makeAsyncCallback8.func, onRenderAnnotationLayerSuccessPromise = _makeAsyncCallback8.promise;
               scale = 2;
-              component = (0, _enzyme.mount)(_react["default"].createElement(_AnnotationLayer.AnnotationLayerInternal, {
+              component = (0, _enzyme.mount)( /*#__PURE__*/_react["default"].createElement(_AnnotationLayer.AnnotationLayerInternal, {
                 linkService: linkService,
                 onRenderAnnotationLayerSuccess: onRenderAnnotationLayerSuccess,
                 page: page,

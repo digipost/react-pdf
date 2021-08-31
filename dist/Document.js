@@ -1,8 +1,8 @@
 "use strict";
 
-var _interopRequireWildcard = require("@babel/runtime/helpers/interopRequireWildcard");
-
 var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
+
+var _typeof3 = require("@babel/runtime/helpers/typeof");
 
 Object.defineProperty(exports, "__esModule", {
   value: true
@@ -13,9 +13,9 @@ var _extends2 = _interopRequireDefault(require("@babel/runtime/helpers/extends")
 
 var _objectWithoutProperties2 = _interopRequireDefault(require("@babel/runtime/helpers/objectWithoutProperties"));
 
-var _typeof2 = _interopRequireDefault(require("@babel/runtime/helpers/typeof"));
-
 var _regenerator = _interopRequireDefault(require("@babel/runtime/regenerator"));
+
+var _typeof2 = _interopRequireDefault(require("@babel/runtime/helpers/typeof"));
 
 var _asyncToGenerator2 = _interopRequireDefault(require("@babel/runtime/helpers/asyncToGenerator"));
 
@@ -23,13 +23,13 @@ var _classCallCheck2 = _interopRequireDefault(require("@babel/runtime/helpers/cl
 
 var _createClass2 = _interopRequireDefault(require("@babel/runtime/helpers/createClass"));
 
-var _possibleConstructorReturn2 = _interopRequireDefault(require("@babel/runtime/helpers/possibleConstructorReturn"));
-
-var _getPrototypeOf3 = _interopRequireDefault(require("@babel/runtime/helpers/getPrototypeOf"));
-
 var _assertThisInitialized2 = _interopRequireDefault(require("@babel/runtime/helpers/assertThisInitialized"));
 
 var _inherits2 = _interopRequireDefault(require("@babel/runtime/helpers/inherits"));
+
+var _possibleConstructorReturn2 = _interopRequireDefault(require("@babel/runtime/helpers/possibleConstructorReturn"));
+
+var _getPrototypeOf2 = _interopRequireDefault(require("@babel/runtime/helpers/getPrototypeOf"));
 
 var _defineProperty2 = _interopRequireDefault(require("@babel/runtime/helpers/defineProperty"));
 
@@ -55,18 +55,26 @@ var _utils = require("./shared/utils");
 
 var _propTypes2 = require("./shared/propTypes");
 
-function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
+var _excluded = ["url"];
 
-function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(source, true).forEach(function (key) { (0, _defineProperty2["default"])(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(source).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
+function _getRequireWildcardCache(nodeInterop) { if (typeof WeakMap !== "function") return null; var cacheBabelInterop = new WeakMap(); var cacheNodeInterop = new WeakMap(); return (_getRequireWildcardCache = function _getRequireWildcardCache(nodeInterop) { return nodeInterop ? cacheNodeInterop : cacheBabelInterop; })(nodeInterop); }
 
-var Document =
-/*#__PURE__*/
-function (_PureComponent) {
+function _interopRequireWildcard(obj, nodeInterop) { if (!nodeInterop && obj && obj.__esModule) { return obj; } if (obj === null || _typeof3(obj) !== "object" && typeof obj !== "function") { return { "default": obj }; } var cache = _getRequireWildcardCache(nodeInterop); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (key !== "default" && Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj["default"] = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
+
+function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) { symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); } keys.push.apply(keys, symbols); } return keys; }
+
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { (0, _defineProperty2["default"])(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
+
+function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = (0, _getPrototypeOf2["default"])(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = (0, _getPrototypeOf2["default"])(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return (0, _possibleConstructorReturn2["default"])(this, result); }; }
+
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})); return true; } catch (e) { return false; } }
+
+var Document = /*#__PURE__*/function (_PureComponent) {
   (0, _inherits2["default"])(Document, _PureComponent);
 
-  function Document() {
-    var _getPrototypeOf2;
+  var _super = _createSuper(Document);
 
+  function Document() {
     var _this;
 
     (0, _classCallCheck2["default"])(this, Document);
@@ -75,7 +83,7 @@ function (_PureComponent) {
       args[_key] = arguments[_key];
     }
 
-    _this = (0, _possibleConstructorReturn2["default"])(this, (_getPrototypeOf2 = (0, _getPrototypeOf3["default"])(Document)).call.apply(_getPrototypeOf2, [this].concat(args)));
+    _this = _super.call.apply(_super, [this].concat(args));
     (0, _defineProperty2["default"])((0, _assertThisInitialized2["default"])(_this), "state", {
       pdf: null
     });
@@ -105,11 +113,7 @@ function (_PureComponent) {
       }
     });
     (0, _defineProperty2["default"])((0, _assertThisInitialized2["default"])(_this), "linkService", new _LinkService["default"]());
-    (0, _defineProperty2["default"])((0, _assertThisInitialized2["default"])(_this), "loadDocument",
-    /*#__PURE__*/
-    (0, _asyncToGenerator2["default"])(
-    /*#__PURE__*/
-    _regenerator["default"].mark(function _callee() {
+    (0, _defineProperty2["default"])((0, _assertThisInitialized2["default"])(_this), "loadDocument", /*#__PURE__*/(0, _asyncToGenerator2["default"])( /*#__PURE__*/_regenerator["default"].mark(function _callee() {
       var source, _this$props, options, onLoadProgress, onPassword, loadingTask, cancellable, pdf;
 
       return _regenerator["default"].wrap(function _callee$(_context) {
@@ -158,7 +162,7 @@ function (_PureComponent) {
               _context.prev = 15;
               // If another loading is in progress, let's cancel it
               (0, _utils.cancelRunningTask)(_this.runningTask);
-              loadingTask = _pdfjsDist["default"].getDocument(_objectSpread({}, source, {}, options));
+              loadingTask = _pdfjsDist["default"].getDocument(_objectSpread(_objectSpread({}, source), options));
               loadingTask.onPassword = onPassword;
 
               if (onLoadProgress) {
@@ -260,11 +264,7 @@ function (_PureComponent) {
       var onLoadError = _this.props.onLoadError;
       (0, _utils.callIfDefined)(onLoadError, error);
     });
-    (0, _defineProperty2["default"])((0, _assertThisInitialized2["default"])(_this), "findDocumentSource",
-    /*#__PURE__*/
-    (0, _asyncToGenerator2["default"])(
-    /*#__PURE__*/
-    _regenerator["default"].mark(function _callee2() {
+    (0, _defineProperty2["default"])((0, _assertThisInitialized2["default"])(_this), "findDocumentSource", /*#__PURE__*/(0, _asyncToGenerator2["default"])( /*#__PURE__*/_regenerator["default"].mark(function _callee2() {
       var file, fileUint8Array, url, otherParams, _fileUint8Array;
 
       return _regenerator["default"].wrap(function _callee2$(_context2) {
@@ -369,7 +369,7 @@ function (_PureComponent) {
                 break;
               }
 
-              url = file.url, otherParams = (0, _objectWithoutProperties2["default"])(file, ["url"]);
+              url = file.url, otherParams = (0, _objectWithoutProperties2["default"])(file, _excluded);
               _fileUint8Array = (0, _utils.dataURItoUint8Array)(url);
               return _context2.abrupt("return", _objectSpread({
                 data: _fileUint8Array
@@ -418,62 +418,14 @@ function (_PureComponent) {
       (0, _utils.cancelRunningTask)(this.runningTask);
     }
   }, {
-    key: "renderChildren",
-    value: function renderChildren() {
-      var children = this.props.children;
-      return _react["default"].createElement(_DocumentContext["default"].Provider, {
-        value: this.childContext
-      }, children);
-    }
-  }, {
-    key: "renderContent",
-    value: function renderContent() {
-      var file = this.props.file;
-      var pdf = this.state.pdf;
-
-      if (!file) {
-        var noData = this.props.noData;
-        return _react["default"].createElement(_Message["default"], {
-          type: "no-data"
-        }, typeof noData === 'function' ? noData() : noData);
-      }
-
-      if (pdf === null) {
-        var loading = this.props.loading;
-        return _react["default"].createElement(_Message["default"], {
-          type: "loading"
-        }, typeof loading === 'function' ? loading() : loading);
-      }
-
-      if (pdf === false) {
-        var error = this.props.error;
-        return _react["default"].createElement(_Message["default"], {
-          type: "error"
-        }, typeof error === 'function' ? error() : error);
-      }
-
-      return this.renderChildren();
-    }
-  }, {
-    key: "render",
-    value: function render() {
-      var _this$props2 = this.props,
-          className = _this$props2.className,
-          inputRef = _this$props2.inputRef;
-      return _react["default"].createElement("div", (0, _extends2["default"])({
-        className: (0, _mergeClassNames["default"])('react-pdf__Document', className),
-        ref: inputRef
-      }, this.eventProps), this.renderContent());
-    }
-  }, {
     key: "childContext",
     get: function get() {
       var linkService = this.linkService,
           registerPage = this.registerPage,
           unregisterPage = this.unregisterPage;
-      var _this$props3 = this.props,
-          renderMode = _this$props3.renderMode,
-          rotate = _this$props3.rotate;
+      var _this$props2 = this.props,
+          renderMode = _this$props2.renderMode,
+          rotate = _this$props2.rotate;
       var pdf = this.state.pdf;
       return {
         linkService: linkService,
@@ -498,6 +450,54 @@ function (_PureComponent) {
      * Called when a document source is resolved correctly
      */
 
+  }, {
+    key: "renderChildren",
+    value: function renderChildren() {
+      var children = this.props.children;
+      return /*#__PURE__*/_react["default"].createElement(_DocumentContext["default"].Provider, {
+        value: this.childContext
+      }, children);
+    }
+  }, {
+    key: "renderContent",
+    value: function renderContent() {
+      var file = this.props.file;
+      var pdf = this.state.pdf;
+
+      if (!file) {
+        var noData = this.props.noData;
+        return /*#__PURE__*/_react["default"].createElement(_Message["default"], {
+          type: "no-data"
+        }, typeof noData === 'function' ? noData() : noData);
+      }
+
+      if (pdf === null) {
+        var loading = this.props.loading;
+        return /*#__PURE__*/_react["default"].createElement(_Message["default"], {
+          type: "loading"
+        }, typeof loading === 'function' ? loading() : loading);
+      }
+
+      if (pdf === false) {
+        var error = this.props.error;
+        return /*#__PURE__*/_react["default"].createElement(_Message["default"], {
+          type: "error"
+        }, typeof error === 'function' ? error() : error);
+      }
+
+      return this.renderChildren();
+    }
+  }, {
+    key: "render",
+    value: function render() {
+      var _this$props3 = this.props,
+          className = _this$props3.className,
+          inputRef = _this$props3.inputRef;
+      return /*#__PURE__*/_react["default"].createElement("div", (0, _extends2["default"])({
+        className: (0, _mergeClassNames["default"])('react-pdf__Document', className),
+        ref: inputRef
+      }, this.eventProps), this.renderContent());
+    }
   }]);
   return Document;
 }(_react.PureComponent);

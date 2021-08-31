@@ -1,8 +1,8 @@
 "use strict";
 
-var _interopRequireWildcard = require("@babel/runtime/helpers/interopRequireWildcard");
-
 var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
+
+var _typeof = require("@babel/runtime/helpers/typeof");
 
 Object.defineProperty(exports, "__esModule", {
   value: true
@@ -16,13 +16,13 @@ var _classCallCheck2 = _interopRequireDefault(require("@babel/runtime/helpers/cl
 
 var _createClass2 = _interopRequireDefault(require("@babel/runtime/helpers/createClass"));
 
-var _possibleConstructorReturn2 = _interopRequireDefault(require("@babel/runtime/helpers/possibleConstructorReturn"));
-
-var _getPrototypeOf3 = _interopRequireDefault(require("@babel/runtime/helpers/getPrototypeOf"));
-
 var _assertThisInitialized2 = _interopRequireDefault(require("@babel/runtime/helpers/assertThisInitialized"));
 
 var _inherits2 = _interopRequireDefault(require("@babel/runtime/helpers/inherits"));
+
+var _possibleConstructorReturn2 = _interopRequireDefault(require("@babel/runtime/helpers/possibleConstructorReturn"));
+
+var _getPrototypeOf2 = _interopRequireDefault(require("@babel/runtime/helpers/getPrototypeOf"));
 
 var _defineProperty2 = _interopRequireDefault(require("@babel/runtime/helpers/defineProperty"));
 
@@ -38,14 +38,20 @@ var _utils = require("../shared/utils");
 
 var _propTypes2 = require("../shared/propTypes");
 
-var PageSVGInternal =
-/*#__PURE__*/
-function (_PureComponent) {
+function _getRequireWildcardCache(nodeInterop) { if (typeof WeakMap !== "function") return null; var cacheBabelInterop = new WeakMap(); var cacheNodeInterop = new WeakMap(); return (_getRequireWildcardCache = function _getRequireWildcardCache(nodeInterop) { return nodeInterop ? cacheNodeInterop : cacheBabelInterop; })(nodeInterop); }
+
+function _interopRequireWildcard(obj, nodeInterop) { if (!nodeInterop && obj && obj.__esModule) { return obj; } if (obj === null || _typeof(obj) !== "object" && typeof obj !== "function") { return { "default": obj }; } var cache = _getRequireWildcardCache(nodeInterop); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (key !== "default" && Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj["default"] = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
+
+function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = (0, _getPrototypeOf2["default"])(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = (0, _getPrototypeOf2["default"])(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return (0, _possibleConstructorReturn2["default"])(this, result); }; }
+
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})); return true; } catch (e) { return false; } }
+
+var PageSVGInternal = /*#__PURE__*/function (_PureComponent) {
   (0, _inherits2["default"])(PageSVGInternal, _PureComponent);
 
-  function PageSVGInternal() {
-    var _getPrototypeOf2;
+  var _super = _createSuper(PageSVGInternal);
 
+  function PageSVGInternal() {
     var _this;
 
     (0, _classCallCheck2["default"])(this, PageSVGInternal);
@@ -54,7 +60,7 @@ function (_PureComponent) {
       args[_key] = arguments[_key];
     }
 
-    _this = (0, _possibleConstructorReturn2["default"])(this, (_getPrototypeOf2 = (0, _getPrototypeOf3["default"])(PageSVGInternal)).call.apply(_getPrototypeOf2, [this].concat(args)));
+    _this = _super.call.apply(_super, [this].concat(args));
     (0, _defineProperty2["default"])((0, _assertThisInitialized2["default"])(_this), "state", {
       svg: null
     });
@@ -118,6 +124,18 @@ function (_PureComponent) {
      */
 
   }, {
+    key: "viewport",
+    get: function get() {
+      var _this$props2 = this.props,
+          page = _this$props2.page,
+          rotate = _this$props2.rotate,
+          scale = _this$props2.scale;
+      return page.getViewport({
+        scale: scale,
+        rotation: rotate
+      });
+    }
+  }, {
     key: "render",
     value: function render() {
       var _this2 = this;
@@ -125,7 +143,7 @@ function (_PureComponent) {
       var _this$viewport2 = this.viewport,
           width = _this$viewport2.width,
           height = _this$viewport2.height;
-      return _react["default"].createElement("div", {
+      return /*#__PURE__*/_react["default"].createElement("div", {
         className: "react-pdf__Page__svg",
         style: {
           display: 'block',
@@ -139,18 +157,6 @@ function (_PureComponent) {
         ref: function ref(_ref) {
           return _this2.drawPageOnContainer(_ref);
         }
-      });
-    }
-  }, {
-    key: "viewport",
-    get: function get() {
-      var _this$props2 = this.props,
-          page = _this$props2.page,
-          rotate = _this$props2.rotate,
-          scale = _this$props2.scale;
-      return page.getViewport({
-        scale: scale,
-        rotation: rotate
       });
     }
   }]);
@@ -167,7 +173,7 @@ PageSVGInternal.propTypes = {
 };
 
 function PageSVG(props) {
-  return _react["default"].createElement(_PageContext["default"].Consumer, null, function (context) {
-    return _react["default"].createElement(PageSVGInternal, (0, _extends2["default"])({}, context, props));
+  return /*#__PURE__*/_react["default"].createElement(_PageContext["default"].Consumer, null, function (context) {
+    return /*#__PURE__*/_react["default"].createElement(PageSVGInternal, (0, _extends2["default"])({}, context, props));
   });
 }

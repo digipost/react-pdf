@@ -9,13 +9,17 @@ exports.loadFromFile = exports.isCancelException = exports.makePageCallback = ex
 
 var _classCallCheck2 = _interopRequireDefault(require("@babel/runtime/helpers/classCallCheck"));
 
+var _inherits2 = _interopRequireDefault(require("@babel/runtime/helpers/inherits"));
+
 var _possibleConstructorReturn2 = _interopRequireDefault(require("@babel/runtime/helpers/possibleConstructorReturn"));
 
 var _getPrototypeOf2 = _interopRequireDefault(require("@babel/runtime/helpers/getPrototypeOf"));
 
-var _inherits2 = _interopRequireDefault(require("@babel/runtime/helpers/inherits"));
-
 var _wrapNativeSuper2 = _interopRequireDefault(require("@babel/runtime/helpers/wrapNativeSuper"));
+
+function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = (0, _getPrototypeOf2["default"])(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = (0, _getPrototypeOf2["default"])(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return (0, _possibleConstructorReturn2["default"])(this, result); }; }
+
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})); return true; } catch (e) { return false; } }
 
 /**
  * Checks if we're running in a browser environment.
@@ -216,16 +220,16 @@ var displayCORSWarning = function displayCORSWarning() {
 
 exports.displayCORSWarning = displayCORSWarning;
 
-var PromiseCancelledException =
-/*#__PURE__*/
-function (_Error) {
+var PromiseCancelledException = /*#__PURE__*/function (_Error) {
   (0, _inherits2["default"])(PromiseCancelledException, _Error);
+
+  var _super = _createSuper(PromiseCancelledException);
 
   function PromiseCancelledException(message, type) {
     var _this;
 
     (0, _classCallCheck2["default"])(this, PromiseCancelledException);
-    _this = (0, _possibleConstructorReturn2["default"])(this, (0, _getPrototypeOf2["default"])(PromiseCancelledException).call(this, message, type));
+    _this = _super.call(this, message, type);
     _this.name = 'PromiseCancelledException';
     _this.message = message;
     _this.type = type;
@@ -233,7 +237,7 @@ function (_Error) {
   }
 
   return PromiseCancelledException;
-}((0, _wrapNativeSuper2["default"])(Error));
+}( /*#__PURE__*/(0, _wrapNativeSuper2["default"])(Error));
 
 var makeCancellable = function makeCancellable(promise) {
   var isCancelled = false;

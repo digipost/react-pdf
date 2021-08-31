@@ -11,9 +11,7 @@ var _classCallCheck2 = _interopRequireDefault(require("@babel/runtime/helpers/cl
 
 var _createClass2 = _interopRequireDefault(require("@babel/runtime/helpers/createClass"));
 
-var Ref =
-/*#__PURE__*/
-function () {
+var Ref = /*#__PURE__*/function () {
   function Ref(_ref) {
     var num = _ref.num,
         gen = _ref.gen;

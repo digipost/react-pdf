@@ -14,7 +14,7 @@ var _propTypes = _interopRequireDefault(require("prop-types"));
 var Message = function Message(_ref) {
   var children = _ref.children,
       type = _ref.type;
-  return _react["default"].createElement("div", {
+  return /*#__PURE__*/_react["default"].createElement("div", {
     className: "react-pdf__message react-pdf__message--".concat(type)
   }, children);
 };

@@ -1,17 +1,17 @@
 "use strict";
 
-var _interopRequireWildcard = require("@babel/runtime/helpers/interopRequireWildcard");
-
 var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
+
+var _typeof = require("@babel/runtime/helpers/typeof");
 
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports["default"] = exports.PageInternal = void 0;
 
-var _extends2 = _interopRequireDefault(require("@babel/runtime/helpers/extends"));
-
 var _regenerator = _interopRequireDefault(require("@babel/runtime/regenerator"));
+
+var _extends2 = _interopRequireDefault(require("@babel/runtime/helpers/extends"));
 
 var _asyncToGenerator2 = _interopRequireDefault(require("@babel/runtime/helpers/asyncToGenerator"));
 
@@ -19,13 +19,13 @@ var _classCallCheck2 = _interopRequireDefault(require("@babel/runtime/helpers/cl
 
 var _createClass2 = _interopRequireDefault(require("@babel/runtime/helpers/createClass"));
 
-var _possibleConstructorReturn2 = _interopRequireDefault(require("@babel/runtime/helpers/possibleConstructorReturn"));
-
-var _getPrototypeOf3 = _interopRequireDefault(require("@babel/runtime/helpers/getPrototypeOf"));
-
 var _assertThisInitialized2 = _interopRequireDefault(require("@babel/runtime/helpers/assertThisInitialized"));
 
 var _inherits2 = _interopRequireDefault(require("@babel/runtime/helpers/inherits"));
+
+var _possibleConstructorReturn2 = _interopRequireDefault(require("@babel/runtime/helpers/possibleConstructorReturn"));
+
+var _getPrototypeOf2 = _interopRequireDefault(require("@babel/runtime/helpers/getPrototypeOf"));
 
 var _defineProperty2 = _interopRequireDefault(require("@babel/runtime/helpers/defineProperty"));
 
@@ -55,20 +55,26 @@ var _utils = require("./shared/utils");
 
 var _propTypes2 = require("./shared/propTypes");
 
-function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
+function _getRequireWildcardCache(nodeInterop) { if (typeof WeakMap !== "function") return null; var cacheBabelInterop = new WeakMap(); var cacheNodeInterop = new WeakMap(); return (_getRequireWildcardCache = function _getRequireWildcardCache(nodeInterop) { return nodeInterop ? cacheNodeInterop : cacheBabelInterop; })(nodeInterop); }
 
-function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(source, true).forEach(function (key) { (0, _defineProperty2["default"])(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(source).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
+function _interopRequireWildcard(obj, nodeInterop) { if (!nodeInterop && obj && obj.__esModule) { return obj; } if (obj === null || _typeof(obj) !== "object" && typeof obj !== "function") { return { "default": obj }; } var cache = _getRequireWildcardCache(nodeInterop); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (key !== "default" && Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj["default"] = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
+
+function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) { symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); } keys.push.apply(keys, symbols); } return keys; }
+
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { (0, _defineProperty2["default"])(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
+
+function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = (0, _getPrototypeOf2["default"])(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = (0, _getPrototypeOf2["default"])(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return (0, _possibleConstructorReturn2["default"])(this, result); }; }
+
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})); return true; } catch (e) { return false; } }
 
 var defaultScale = 1.0;
 
-var PageInternal =
-/*#__PURE__*/
-function (_PureComponent) {
+var PageInternal = /*#__PURE__*/function (_PureComponent) {
   (0, _inherits2["default"])(PageInternal, _PureComponent);
 
-  function PageInternal() {
-    var _getPrototypeOf2;
+  var _super = _createSuper(PageInternal);
 
+  function PageInternal() {
     var _this;
 
     (0, _classCallCheck2["default"])(this, PageInternal);
@@ -77,7 +83,7 @@ function (_PureComponent) {
       args[_key] = arguments[_key];
     }
 
-    _this = (0, _possibleConstructorReturn2["default"])(this, (_getPrototypeOf2 = (0, _getPrototypeOf3["default"])(PageInternal)).call.apply(_getPrototypeOf2, [this].concat(args)));
+    _this = _super.call.apply(_super, [this].concat(args));
     (0, _defineProperty2["default"])((0, _assertThisInitialized2["default"])(_this), "state", {
       page: null
     });
@@ -98,11 +104,7 @@ function (_PureComponent) {
       var onLoadError = _this.props.onLoadError;
       (0, _utils.callIfDefined)(onLoadError, error);
     });
-    (0, _defineProperty2["default"])((0, _assertThisInitialized2["default"])(_this), "loadPage",
-    /*#__PURE__*/
-    (0, _asyncToGenerator2["default"])(
-    /*#__PURE__*/
-    _regenerator["default"].mark(function _callee() {
+    (0, _defineProperty2["default"])((0, _assertThisInitialized2["default"])(_this), "loadPage", /*#__PURE__*/(0, _asyncToGenerator2["default"])( /*#__PURE__*/_regenerator["default"].mark(function _callee() {
       var pdf, pageNumber, cancellable, page;
       return _regenerator["default"].wrap(function _callee$(_context) {
         while (1) {
@@ -195,150 +197,6 @@ function (_PureComponent) {
       (0, _utils.cancelRunningTask)(this.runningTask);
     }
   }, {
-    key: "getPageIndex",
-    value: function getPageIndex() {
-      var props = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : this.props;
-
-      if ((0, _utils.isProvided)(props.pageNumber)) {
-        return props.pageNumber - 1;
-      }
-
-      if ((0, _utils.isProvided)(props.pageIndex)) {
-        return props.pageIndex;
-      }
-
-      return null;
-    }
-  }, {
-    key: "getPageNumber",
-    value: function getPageNumber() {
-      var props = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : this.props;
-
-      if ((0, _utils.isProvided)(props.pageNumber)) {
-        return props.pageNumber;
-      }
-
-      if ((0, _utils.isProvided)(props.pageIndex)) {
-        return props.pageIndex + 1;
-      }
-
-      return null;
-    }
-  }, {
-    key: "renderMainLayer",
-    value: function renderMainLayer() {
-      var renderMode = this.props.renderMode;
-
-      switch (renderMode) {
-        case 'none':
-          return null;
-
-        case 'svg':
-          return _react["default"].createElement(_PageSVG["default"], {
-            key: "".concat(this.pageKeyNoScale, "_svg")
-          });
-
-        case 'canvas':
-        default:
-          return _react["default"].createElement(_PageCanvas["default"], {
-            key: "".concat(this.pageKey, "_canvas")
-          });
-      }
-    }
-  }, {
-    key: "renderTextLayer",
-    value: function renderTextLayer() {
-      var renderTextLayer = this.props.renderTextLayer;
-
-      if (!renderTextLayer) {
-        return null;
-      }
-
-      return _react["default"].createElement(_TextLayer["default"], {
-        key: "".concat(this.pageKey, "_text")
-      });
-    }
-  }, {
-    key: "renderAnnotationLayer",
-    value: function renderAnnotationLayer() {
-      var renderAnnotationLayer = this.props.renderAnnotationLayer;
-
-      if (!renderAnnotationLayer) {
-        return null;
-      }
-      /**
-       * As of now, PDF.js 2.0.943 returns warnings on unimplemented annotations in SVG mode.
-       * Therefore, as a fallback, we render "traditional" AnnotationLayer component.
-       */
-
-
-      return _react["default"].createElement(_AnnotationLayer["default"], (0, _extends2["default"])({
-        key: "".concat(this.pageKey, "_annotations")
-      }, this.props));
-    }
-  }, {
-    key: "renderChildren",
-    value: function renderChildren() {
-      var children = this.props.children;
-      return _react["default"].createElement(_PageContext["default"].Provider, {
-        value: this.childContext
-      }, this.renderMainLayer(), this.renderTextLayer(), this.renderAnnotationLayer(), children);
-    }
-  }, {
-    key: "renderContent",
-    value: function renderContent() {
-      var pageNumber = this.pageNumber;
-      var pdf = this.props.pdf;
-      var page = this.state.page;
-
-      if (!pageNumber) {
-        var noData = this.props.noData;
-        return _react["default"].createElement(_Message["default"], {
-          type: "no-data"
-        }, typeof noData === 'function' ? noData() : noData);
-      }
-
-      if (pdf === null || page === null) {
-        var loading = this.props.loading;
-        return _react["default"].createElement(_Message["default"], {
-          type: "loading"
-        }, typeof loading === 'function' ? loading() : loading);
-      }
-
-      if (pdf === false || page === false) {
-        var error = this.props.error;
-        return _react["default"].createElement(_Message["default"], {
-          type: "error"
-        }, typeof error === 'function' ? error() : error);
-      }
-
-      return this.renderChildren();
-    }
-  }, {
-    key: "render",
-    value: function render() {
-      var _this2 = this;
-
-      var pageNumber = this.pageNumber;
-      var className = this.props.className;
-      return _react["default"].createElement("div", (0, _extends2["default"])({
-        className: (0, _mergeClassNames["default"])('react-pdf__Page', className),
-        ref: function ref(_ref2) {
-          var inputRef = _this2.props.inputRef;
-
-          if (inputRef) {
-            inputRef(_ref2);
-          }
-
-          _this2.ref = _ref2;
-        },
-        style: {
-          position: 'relative'
-        },
-        "data-page-number": pageNumber
-      }, this.eventProps), this.renderContent());
-    }
-  }, {
     key: "childContext",
     get: function get() {
       var page = this.state.page;
@@ -378,6 +236,36 @@ function (_PureComponent) {
      * Called when a page is loaded successfully
      */
 
+  }, {
+    key: "getPageIndex",
+    value: function getPageIndex() {
+      var props = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : this.props;
+
+      if ((0, _utils.isProvided)(props.pageNumber)) {
+        return props.pageNumber - 1;
+      }
+
+      if ((0, _utils.isProvided)(props.pageIndex)) {
+        return props.pageIndex;
+      }
+
+      return null;
+    }
+  }, {
+    key: "getPageNumber",
+    value: function getPageNumber() {
+      var props = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : this.props;
+
+      if ((0, _utils.isProvided)(props.pageNumber)) {
+        return props.pageNumber;
+      }
+
+      if ((0, _utils.isProvided)(props.pageIndex)) {
+        return props.pageIndex + 1;
+      }
+
+      return null;
+    }
   }, {
     key: "pageIndex",
     get: function get() {
@@ -437,16 +325,16 @@ function (_PureComponent) {
   }, {
     key: "eventProps",
     get: function get() {
-      var _this3 = this;
+      var _this2 = this;
 
       return (0, _makeEventProps["default"])(this.props, function () {
-        var page = _this3.state.page;
+        var page = _this2.state.page;
 
         if (!page) {
           return page;
         }
 
-        return (0, _utils.makePageCallback)(page, _this3.scale);
+        return (0, _utils.makePageCallback)(page, _this2.scale);
       });
     }
   }, {
@@ -460,6 +348,120 @@ function (_PureComponent) {
     get: function get() {
       var page = this.state.page;
       return "".concat(page.pageIndex, "/").concat(this.rotate);
+    }
+  }, {
+    key: "renderMainLayer",
+    value: function renderMainLayer() {
+      var renderMode = this.props.renderMode;
+
+      switch (renderMode) {
+        case 'none':
+          return null;
+
+        case 'svg':
+          return /*#__PURE__*/_react["default"].createElement(_PageSVG["default"], {
+            key: "".concat(this.pageKeyNoScale, "_svg")
+          });
+
+        case 'canvas':
+        default:
+          return /*#__PURE__*/_react["default"].createElement(_PageCanvas["default"], {
+            key: "".concat(this.pageKey, "_canvas")
+          });
+      }
+    }
+  }, {
+    key: "renderTextLayer",
+    value: function renderTextLayer() {
+      var renderTextLayer = this.props.renderTextLayer;
+
+      if (!renderTextLayer) {
+        return null;
+      }
+
+      return /*#__PURE__*/_react["default"].createElement(_TextLayer["default"], {
+        key: "".concat(this.pageKey, "_text")
+      });
+    }
+  }, {
+    key: "renderAnnotationLayer",
+    value: function renderAnnotationLayer() {
+      var renderAnnotationLayer = this.props.renderAnnotationLayer;
+
+      if (!renderAnnotationLayer) {
+        return null;
+      }
+      /**
+       * As of now, PDF.js 2.0.943 returns warnings on unimplemented annotations in SVG mode.
+       * Therefore, as a fallback, we render "traditional" AnnotationLayer component.
+       */
+
+
+      return /*#__PURE__*/_react["default"].createElement(_AnnotationLayer["default"], (0, _extends2["default"])({
+        key: "".concat(this.pageKey, "_annotations")
+      }, this.props));
+    }
+  }, {
+    key: "renderChildren",
+    value: function renderChildren() {
+      var children = this.props.children;
+      return /*#__PURE__*/_react["default"].createElement(_PageContext["default"].Provider, {
+        value: this.childContext
+      }, this.renderMainLayer(), this.renderTextLayer(), this.renderAnnotationLayer(), children);
+    }
+  }, {
+    key: "renderContent",
+    value: function renderContent() {
+      var pageNumber = this.pageNumber;
+      var pdf = this.props.pdf;
+      var page = this.state.page;
+
+      if (!pageNumber) {
+        var noData = this.props.noData;
+        return /*#__PURE__*/_react["default"].createElement(_Message["default"], {
+          type: "no-data"
+        }, typeof noData === 'function' ? noData() : noData);
+      }
+
+      if (pdf === null || page === null) {
+        var loading = this.props.loading;
+        return /*#__PURE__*/_react["default"].createElement(_Message["default"], {
+          type: "loading"
+        }, typeof loading === 'function' ? loading() : loading);
+      }
+
+      if (pdf === false || page === false) {
+        var error = this.props.error;
+        return /*#__PURE__*/_react["default"].createElement(_Message["default"], {
+          type: "error"
+        }, typeof error === 'function' ? error() : error);
+      }
+
+      return this.renderChildren();
+    }
+  }, {
+    key: "render",
+    value: function render() {
+      var _this3 = this;
+
+      var pageNumber = this.pageNumber;
+      var className = this.props.className;
+      return /*#__PURE__*/_react["default"].createElement("div", (0, _extends2["default"])({
+        className: (0, _mergeClassNames["default"])('react-pdf__Page', className),
+        ref: function ref(_ref2) {
+          var inputRef = _this3.props.inputRef;
+
+          if (inputRef) {
+            inputRef(_ref2);
+          }
+
+          _this3.ref = _ref2;
+        },
+        style: {
+          position: 'relative'
+        },
+        "data-page-number": pageNumber
+      }, this.eventProps), this.renderContent());
     }
   }]);
   return PageInternal;
@@ -506,8 +508,8 @@ PageInternal.propTypes = _objectSpread({
 }, (0, _propTypes2.eventsProps)());
 
 function Page(props, ref) {
-  return _react["default"].createElement(_DocumentContext["default"].Consumer, null, function (context) {
-    return _react["default"].createElement(PageInternal, (0, _extends2["default"])({
+  return /*#__PURE__*/_react["default"].createElement(_DocumentContext["default"].Consumer, null, function (context) {
+    return /*#__PURE__*/_react["default"].createElement(PageInternal, (0, _extends2["default"])({
       ref: ref
     }, context, props, {
       // For backwards compatibility
@@ -516,6 +518,6 @@ function Page(props, ref) {
   });
 }
 
-var _default = _react["default"].forwardRef(Page);
+var _default = /*#__PURE__*/_react["default"].forwardRef(Page);
 
 exports["default"] = _default;

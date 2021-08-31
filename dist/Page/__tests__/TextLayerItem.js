@@ -2,9 +2,9 @@
 
 var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
 
-var _extends2 = _interopRequireDefault(require("@babel/runtime/helpers/extends"));
-
 var _regenerator = _interopRequireDefault(require("@babel/runtime/regenerator"));
+
+var _extends2 = _interopRequireDefault(require("@babel/runtime/helpers/extends"));
 
 var _asyncToGenerator2 = _interopRequireDefault(require("@babel/runtime/helpers/asyncToGenerator"));
 
@@ -24,11 +24,7 @@ var pdfFile = (0, _utils.loadPDF)('./__mocks__/_pdf.pdf');
 describe('TextLayerItem', function () {
   // Loaded page
   var page;
-  beforeAll(
-  /*#__PURE__*/
-  (0, _asyncToGenerator2["default"])(
-  /*#__PURE__*/
-  _regenerator["default"].mark(function _callee() {
+  beforeAll( /*#__PURE__*/(0, _asyncToGenerator2["default"])( /*#__PURE__*/_regenerator["default"].mark(function _callee() {
     var pdf;
     return _regenerator["default"].wrap(function _callee$(_context) {
       while (1) {
@@ -64,7 +60,7 @@ describe('TextLayerItem', function () {
   describe('rendering', function () {
     it('renders text content properly', function () {
       var str = 'Test string';
-      var component = (0, _enzyme.shallow)(_react["default"].createElement(_TextLayerItem.TextLayerItemInternal, (0, _extends2["default"])({}, defaultProps, {
+      var component = (0, _enzyme.shallow)( /*#__PURE__*/_react["default"].createElement(_TextLayerItem.TextLayerItemInternal, (0, _extends2["default"])({}, defaultProps, {
         page: page,
         str: str
       })));
@@ -75,7 +71,7 @@ describe('TextLayerItem', function () {
       var customTextRenderer = jest.fn();
       var str = 'Test string';
       var itemIndex = 5;
-      (0, _enzyme.shallow)(_react["default"].createElement(_TextLayerItem.TextLayerItemInternal, (0, _extends2["default"])({}, defaultProps, {
+      (0, _enzyme.shallow)( /*#__PURE__*/_react["default"].createElement(_TextLayerItem.TextLayerItemInternal, (0, _extends2["default"])({}, defaultProps, {
         customTextRenderer: customTextRenderer,
         itemIndex: itemIndex,
         page: page,
@@ -91,7 +87,7 @@ describe('TextLayerItem', function () {
         return 'Test value';
       };
 
-      var component = (0, _enzyme.shallow)(_react["default"].createElement(_TextLayerItem.TextLayerItemInternal, (0, _extends2["default"])({}, defaultProps, {
+      var component = (0, _enzyme.shallow)( /*#__PURE__*/_react["default"].createElement(_TextLayerItem.TextLayerItemInternal, (0, _extends2["default"])({}, defaultProps, {
         customTextRenderer: customTextRenderer,
         page: page
       })));

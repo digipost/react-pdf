@@ -1,17 +1,17 @@
 "use strict";
 
-var _interopRequireWildcard = require("@babel/runtime/helpers/interopRequireWildcard");
-
 var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
+
+var _typeof = require("@babel/runtime/helpers/typeof");
 
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports["default"] = exports.AnnotationLayerInternal = void 0;
 
-var _extends2 = _interopRequireDefault(require("@babel/runtime/helpers/extends"));
-
 var _regenerator = _interopRequireDefault(require("@babel/runtime/regenerator"));
+
+var _extends2 = _interopRequireDefault(require("@babel/runtime/helpers/extends"));
 
 var _asyncToGenerator2 = _interopRequireDefault(require("@babel/runtime/helpers/asyncToGenerator"));
 
@@ -19,13 +19,13 @@ var _classCallCheck2 = _interopRequireDefault(require("@babel/runtime/helpers/cl
 
 var _createClass2 = _interopRequireDefault(require("@babel/runtime/helpers/createClass"));
 
-var _possibleConstructorReturn2 = _interopRequireDefault(require("@babel/runtime/helpers/possibleConstructorReturn"));
-
-var _getPrototypeOf3 = _interopRequireDefault(require("@babel/runtime/helpers/getPrototypeOf"));
-
 var _assertThisInitialized2 = _interopRequireDefault(require("@babel/runtime/helpers/assertThisInitialized"));
 
 var _inherits2 = _interopRequireDefault(require("@babel/runtime/helpers/inherits"));
+
+var _possibleConstructorReturn2 = _interopRequireDefault(require("@babel/runtime/helpers/possibleConstructorReturn"));
+
+var _getPrototypeOf2 = _interopRequireDefault(require("@babel/runtime/helpers/getPrototypeOf"));
 
 var _defineProperty2 = _interopRequireDefault(require("@babel/runtime/helpers/defineProperty"));
 
@@ -43,14 +43,20 @@ var _utils = require("../shared/utils");
 
 var _propTypes2 = require("../shared/propTypes");
 
-var AnnotationLayerInternal =
-/*#__PURE__*/
-function (_PureComponent) {
+function _getRequireWildcardCache(nodeInterop) { if (typeof WeakMap !== "function") return null; var cacheBabelInterop = new WeakMap(); var cacheNodeInterop = new WeakMap(); return (_getRequireWildcardCache = function _getRequireWildcardCache(nodeInterop) { return nodeInterop ? cacheNodeInterop : cacheBabelInterop; })(nodeInterop); }
+
+function _interopRequireWildcard(obj, nodeInterop) { if (!nodeInterop && obj && obj.__esModule) { return obj; } if (obj === null || _typeof(obj) !== "object" && typeof obj !== "function") { return { "default": obj }; } var cache = _getRequireWildcardCache(nodeInterop); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (key !== "default" && Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj["default"] = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
+
+function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = (0, _getPrototypeOf2["default"])(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = (0, _getPrototypeOf2["default"])(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return (0, _possibleConstructorReturn2["default"])(this, result); }; }
+
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})); return true; } catch (e) { return false; } }
+
+var AnnotationLayerInternal = /*#__PURE__*/function (_PureComponent) {
   (0, _inherits2["default"])(AnnotationLayerInternal, _PureComponent);
 
-  function AnnotationLayerInternal() {
-    var _getPrototypeOf2;
+  var _super = _createSuper(AnnotationLayerInternal);
 
+  function AnnotationLayerInternal() {
     var _this;
 
     (0, _classCallCheck2["default"])(this, AnnotationLayerInternal);
@@ -59,15 +65,11 @@ function (_PureComponent) {
       args[_key] = arguments[_key];
     }
 
-    _this = (0, _possibleConstructorReturn2["default"])(this, (_getPrototypeOf2 = (0, _getPrototypeOf3["default"])(AnnotationLayerInternal)).call.apply(_getPrototypeOf2, [this].concat(args)));
+    _this = _super.call.apply(_super, [this].concat(args));
     (0, _defineProperty2["default"])((0, _assertThisInitialized2["default"])(_this), "state", {
       annotations: null
     });
-    (0, _defineProperty2["default"])((0, _assertThisInitialized2["default"])(_this), "loadAnnotations",
-    /*#__PURE__*/
-    (0, _asyncToGenerator2["default"])(
-    /*#__PURE__*/
-    _regenerator["default"].mark(function _callee() {
+    (0, _defineProperty2["default"])((0, _assertThisInitialized2["default"])(_this), "loadAnnotations", /*#__PURE__*/(0, _asyncToGenerator2["default"])( /*#__PURE__*/_regenerator["default"].mark(function _callee() {
       var page, cancellable, annotations;
       return _regenerator["default"].wrap(function _callee$(_context) {
         while (1) {
@@ -165,6 +167,18 @@ function (_PureComponent) {
       (0, _utils.cancelRunningTask)(this.runningTask);
     }
   }, {
+    key: "viewport",
+    get: function get() {
+      var _this$props2 = this.props,
+          page = _this$props2.page,
+          rotate = _this$props2.rotate,
+          scale = _this$props2.scale;
+      return page.getViewport({
+        scale: scale,
+        rotation: rotate
+      });
+    }
+  }, {
     key: "renderAnnotationLayer",
     value: function renderAnnotationLayer() {
       var annotations = this.state.annotations;
@@ -173,10 +187,10 @@ function (_PureComponent) {
         return;
       }
 
-      var _this$props2 = this.props,
-          linkService = _this$props2.linkService,
-          page = _this$props2.page,
-          renderInteractiveForms = _this$props2.renderInteractiveForms;
+      var _this$props3 = this.props,
+          linkService = _this$props3.linkService,
+          page = _this$props3.page,
+          renderInteractiveForms = _this$props3.renderInteractiveForms;
       var viewport = this.viewport.clone({
         dontFlip: true
       });
@@ -203,24 +217,12 @@ function (_PureComponent) {
     value: function render() {
       var _this2 = this;
 
-      return _react["default"].createElement("div", {
+      return /*#__PURE__*/_react["default"].createElement("div", {
         className: "react-pdf__Page__annotations annotationLayer",
         ref: function ref(_ref2) {
           _this2.annotationLayer = _ref2;
         }
       }, this.renderAnnotationLayer());
-    }
-  }, {
-    key: "viewport",
-    get: function get() {
-      var _this$props3 = this.props,
-          page = _this$props3.page,
-          rotate = _this$props3.rotate,
-          scale = _this$props3.scale;
-      return page.getViewport({
-        scale: scale,
-        rotation: rotate
-      });
     }
   }]);
   return AnnotationLayerInternal;
@@ -240,9 +242,9 @@ AnnotationLayerInternal.propTypes = {
 };
 
 var AnnotationLayer = function AnnotationLayer(props) {
-  return _react["default"].createElement(_DocumentContext["default"].Consumer, null, function (documentContext) {
-    return _react["default"].createElement(_PageContext["default"].Consumer, null, function (pageContext) {
-      return _react["default"].createElement(AnnotationLayerInternal, (0, _extends2["default"])({}, documentContext, pageContext, props));
+  return /*#__PURE__*/_react["default"].createElement(_DocumentContext["default"].Consumer, null, function (documentContext) {
+    return /*#__PURE__*/_react["default"].createElement(_PageContext["default"].Consumer, null, function (pageContext) {
+      return /*#__PURE__*/_react["default"].createElement(AnnotationLayerInternal, (0, _extends2["default"])({}, documentContext, pageContext, props));
     });
   });
 };

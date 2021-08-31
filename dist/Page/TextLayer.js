@@ -1,8 +1,8 @@
 "use strict";
 
-var _interopRequireWildcard = require("@babel/runtime/helpers/interopRequireWildcard");
-
 var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
+
+var _typeof = require("@babel/runtime/helpers/typeof");
 
 Object.defineProperty(exports, "__esModule", {
   value: true
@@ -10,9 +10,9 @@ Object.defineProperty(exports, "__esModule", {
 exports["default"] = TextLayer;
 exports.TextLayerInternal = void 0;
 
-var _extends2 = _interopRequireDefault(require("@babel/runtime/helpers/extends"));
-
 var _regenerator = _interopRequireDefault(require("@babel/runtime/regenerator"));
+
+var _extends2 = _interopRequireDefault(require("@babel/runtime/helpers/extends"));
 
 var _asyncToGenerator2 = _interopRequireDefault(require("@babel/runtime/helpers/asyncToGenerator"));
 
@@ -20,13 +20,13 @@ var _classCallCheck2 = _interopRequireDefault(require("@babel/runtime/helpers/cl
 
 var _createClass2 = _interopRequireDefault(require("@babel/runtime/helpers/createClass"));
 
-var _possibleConstructorReturn2 = _interopRequireDefault(require("@babel/runtime/helpers/possibleConstructorReturn"));
-
-var _getPrototypeOf3 = _interopRequireDefault(require("@babel/runtime/helpers/getPrototypeOf"));
-
 var _assertThisInitialized2 = _interopRequireDefault(require("@babel/runtime/helpers/assertThisInitialized"));
 
 var _inherits2 = _interopRequireDefault(require("@babel/runtime/helpers/inherits"));
+
+var _possibleConstructorReturn2 = _interopRequireDefault(require("@babel/runtime/helpers/possibleConstructorReturn"));
+
+var _getPrototypeOf2 = _interopRequireDefault(require("@babel/runtime/helpers/getPrototypeOf"));
 
 var _defineProperty2 = _interopRequireDefault(require("@babel/runtime/helpers/defineProperty"));
 
@@ -42,14 +42,20 @@ var _utils = require("../shared/utils");
 
 var _propTypes2 = require("../shared/propTypes");
 
-var TextLayerInternal =
-/*#__PURE__*/
-function (_PureComponent) {
+function _getRequireWildcardCache(nodeInterop) { if (typeof WeakMap !== "function") return null; var cacheBabelInterop = new WeakMap(); var cacheNodeInterop = new WeakMap(); return (_getRequireWildcardCache = function _getRequireWildcardCache(nodeInterop) { return nodeInterop ? cacheNodeInterop : cacheBabelInterop; })(nodeInterop); }
+
+function _interopRequireWildcard(obj, nodeInterop) { if (!nodeInterop && obj && obj.__esModule) { return obj; } if (obj === null || _typeof(obj) !== "object" && typeof obj !== "function") { return { "default": obj }; } var cache = _getRequireWildcardCache(nodeInterop); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (key !== "default" && Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj["default"] = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
+
+function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = (0, _getPrototypeOf2["default"])(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = (0, _getPrototypeOf2["default"])(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return (0, _possibleConstructorReturn2["default"])(this, result); }; }
+
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})); return true; } catch (e) { return false; } }
+
+var TextLayerInternal = /*#__PURE__*/function (_PureComponent) {
   (0, _inherits2["default"])(TextLayerInternal, _PureComponent);
 
-  function TextLayerInternal() {
-    var _getPrototypeOf2;
+  var _super = _createSuper(TextLayerInternal);
 
+  function TextLayerInternal() {
     var _this;
 
     (0, _classCallCheck2["default"])(this, TextLayerInternal);
@@ -58,16 +64,12 @@ function (_PureComponent) {
       args[_key] = arguments[_key];
     }
 
-    _this = (0, _possibleConstructorReturn2["default"])(this, (_getPrototypeOf2 = (0, _getPrototypeOf3["default"])(TextLayerInternal)).call.apply(_getPrototypeOf2, [this].concat(args)));
+    _this = _super.call.apply(_super, [this].concat(args));
     (0, _defineProperty2["default"])((0, _assertThisInitialized2["default"])(_this), "state", {
       textItems: null
     });
-    (0, _defineProperty2["default"])((0, _assertThisInitialized2["default"])(_this), "loadTextItems",
-    /*#__PURE__*/
-    (0, _asyncToGenerator2["default"])(
-    /*#__PURE__*/
-    _regenerator["default"].mark(function _callee() {
-      var page, cancellable, _ref2, textItems;
+    (0, _defineProperty2["default"])((0, _assertThisInitialized2["default"])(_this), "loadTextItems", /*#__PURE__*/(0, _asyncToGenerator2["default"])( /*#__PURE__*/_regenerator["default"].mark(function _callee() {
+      var page, cancellable, _yield$cancellable$pr, textItems;
 
       return _regenerator["default"].wrap(function _callee$(_context) {
         while (1) {
@@ -81,8 +83,8 @@ function (_PureComponent) {
               return cancellable.promise;
 
             case 6:
-              _ref2 = _context.sent;
-              textItems = _ref2.items;
+              _yield$cancellable$pr = _context.sent;
+              textItems = _yield$cancellable$pr.items;
 
               _this.setState({
                 textItems: textItems
@@ -151,42 +153,6 @@ function (_PureComponent) {
       (0, _utils.cancelRunningTask)(this.runningTask);
     }
   }, {
-    key: "renderTextItems",
-    value: function renderTextItems() {
-      var textItems = this.state.textItems;
-
-      if (!textItems) {
-        return null;
-      }
-
-      return textItems.map(function (textItem, itemIndex) {
-        return _react["default"].createElement(_TextLayerItem["default"] // eslint-disable-next-line react/no-array-index-key
-        , (0, _extends2["default"])({
-          key: itemIndex,
-          itemIndex: itemIndex
-        }, textItem));
-      });
-    }
-  }, {
-    key: "render",
-    value: function render() {
-      var viewport = this.unrotatedViewport,
-          rotate = this.rotate;
-      return _react["default"].createElement("div", {
-        className: "react-pdf__Page__textContent",
-        style: {
-          position: 'absolute',
-          top: '50%',
-          left: '50%',
-          width: "".concat(viewport.width, "px"),
-          height: "".concat(viewport.height, "px"),
-          color: 'transparent',
-          transform: "translate(-50%, -50%) rotate(".concat(rotate, "deg)"),
-          pointerEvents: 'none'
-        }
-      }, this.renderTextItems());
-    }
-  }, {
     key: "unrotatedViewport",
     get: function get() {
       var _this$props = this.props,
@@ -209,6 +175,42 @@ function (_PureComponent) {
           rotate = _this$props2.rotate;
       return rotate - page.rotate;
     }
+  }, {
+    key: "renderTextItems",
+    value: function renderTextItems() {
+      var textItems = this.state.textItems;
+
+      if (!textItems) {
+        return null;
+      }
+
+      return textItems.map(function (textItem, itemIndex) {
+        return /*#__PURE__*/_react["default"].createElement(_TextLayerItem["default"] // eslint-disable-next-line react/no-array-index-key
+        , (0, _extends2["default"])({
+          key: itemIndex,
+          itemIndex: itemIndex
+        }, textItem));
+      });
+    }
+  }, {
+    key: "render",
+    value: function render() {
+      var viewport = this.unrotatedViewport,
+          rotate = this.rotate;
+      return /*#__PURE__*/_react["default"].createElement("div", {
+        className: "react-pdf__Page__textContent",
+        style: {
+          position: 'absolute',
+          top: '50%',
+          left: '50%',
+          width: "".concat(viewport.width, "px"),
+          height: "".concat(viewport.height, "px"),
+          color: 'transparent',
+          transform: "translate(-50%, -50%) rotate(".concat(rotate, "deg)"),
+          pointerEvents: 'none'
+        }
+      }, this.renderTextItems());
+    }
   }]);
   return TextLayerInternal;
 }(_react.PureComponent);
@@ -223,7 +225,7 @@ TextLayerInternal.propTypes = {
 };
 
 function TextLayer(props) {
-  return _react["default"].createElement(_PageContext["default"].Consumer, null, function (context) {
-    return _react["default"].createElement(TextLayerInternal, (0, _extends2["default"])({}, context, props));
+  return /*#__PURE__*/_react["default"].createElement(_PageContext["default"].Consumer, null, function (context) {
+    return /*#__PURE__*/_react["default"].createElement(TextLayerInternal, (0, _extends2["default"])({}, context, props));
   });
 }
