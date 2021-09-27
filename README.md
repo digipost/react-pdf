@@ -1,3 +1,9 @@
+# ⚠️ Deprecated ⚠️
+
+We no longer need our own fork of this repo, and it will not be maintained!
+
+# Readme
+
 [![npm](https://img.shields.io/npm/v/react-pdf.svg)](https://www.npmjs.com/package/react-pdf) ![downloads](https://img.shields.io/npm/dt/react-pdf.svg) ![build](https://img.shields.io/travis/wojtekmaj/react-pdf/master.svg) ![dependencies](https://img.shields.io/david/wojtekmaj/react-pdf.svg) ![dev dependencies](https://img.shields.io/david/dev/wojtekmaj/react-pdf.svg) [![tested with jest](https://img.shields.io/badge/tested_with-jest-99424f.svg)](https://github.com/facebook/jest)
 
 # React-PDF
